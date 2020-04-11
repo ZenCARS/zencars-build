@@ -1,8 +1,10 @@
-# ZenCARS BYOI
+# ZenCARS BYOI (EARLY ALPHA)
 
 ## Get your code to build your own iso
 
 	git clone https://github.com/ZenCARS/zencars-build
+
+Choose your desktop and run the build script 30-*
 
 
 # Further information about ArcoLinux
