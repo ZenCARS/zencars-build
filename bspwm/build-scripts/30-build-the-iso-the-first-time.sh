@@ -18,6 +18,8 @@
 #Let us change the name"
 #First letter of desktop small
 
+build_bare="-bare"
+
 desktop="bspwm"
 xdesktop="bspwm"
 
@@ -46,7 +48,7 @@ oldname6='DISTRIB_DESCRIPTION="ZenCARS"'
 newname6='DISTRIB_DESCRIPTION=ZenCARS-'$desktop
 
 #hostname
-oldname7='ArcoLZenCARSinux'
+oldname7='ZenCARS'
 newname7='ZenCARS-'$desktop
 
 #hosts
@@ -84,9 +86,8 @@ echo "################################################################## "
 echo
 echo "Removing the old packages.x86_64 file from work folder"
 rm ../work/archiso/packages.x86_64
-echo "Copying the new packages.x86_64 file"
-cp -f ../archiso/packages-bare.x86_64 ../work/archiso/packages.x86_64
-#cp -f ../archiso/packages.x86_64 ../work/archiso/packages.x86_64
+echo "Copying the new packages$build_bare.x86_64 file"
+cp -f "../archiso/packages$build_bare.x86_64" ../work/archiso/packages.x86_64
 
 echo "Removing old files/folders from /etc/skel"
 rm -rf ../work/archiso/airootfs/etc/skel/.* 2> /dev/null
