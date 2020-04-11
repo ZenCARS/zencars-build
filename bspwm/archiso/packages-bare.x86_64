@@ -530,6 +530,8 @@ arcolinux-wallpapers-git
 #arcolinux-xmobar-git
 #arcolinux-zsh-git
 
+arcolinux-logout-git
+
 zencars-mirrorlist-git
 zencars-bin-git
 zencars-keyring
