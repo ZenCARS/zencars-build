@@ -37,7 +37,6 @@ irssi
 #iwd
 jfsutils
 #lftp
-libatomic_ops
 linux-atm
 linux-firmware
 logrotate
@@ -64,7 +63,7 @@ parted
 partimage
 ppp
 pptpclient
-refind-efi
+refind
 reiserfsprogs
 rp-pppoe
 rsync
@@ -74,6 +73,7 @@ smartmontools
 sudo
 tcpdump
 testdisk
+texinfo
 usb_modeswitch
 usbutils
 vi
@@ -139,7 +139,7 @@ base-devel
 
 ###virtual box or vmware
 #open-vm-tools  this made it lag
-virtualbox-guest-modules-arch
+#virtualbox-guest-modules-arch
 virtualbox-guest-utils
 
 ###packages for dual boot
@@ -165,16 +165,16 @@ pulseaudio-alsa
 pavucontrol
 
 ###bluetooth
-blueberry
-bluez
-bluez-libs
-bluez-utils
+#blueberry
+#bluez
+#bluez-libs
+#bluez-utils
 #bluez-firmware
-pulseaudio-bluetooth
+#pulseaudio-bluetooth
 
 ###network
-avahi
-nss-mdns
+#avahi
+#nss-mdns
 mobile-broadband-provider-info
 modemmanager
 networkmanager
@@ -200,27 +200,27 @@ udisks2
 xdg-user-dirs
 
 ###printers
-cups
-cups-filters
-cups-pdf
-cups-pk-helper
-ghostscript
-gsfonts
-gtk3-print-backends
-gutenprint
-libcups
+#cups
+#cups-filters
+#cups-pdf
+#cups-pk-helper
+#ghostscript
+#gsfonts
+#gtk3-print-backends
+#gutenprint
+#libcups
 #hplip
-splix
-system-config-printer
+#splix
+#system-config-printer
 
 ###tumbler
-tumbler
-ffmpegthumbnailer
-freetype2
-libgsf
-libopenraw
-poppler-glib
-poppler-qt5
+#tumbler
+#ffmpegthumbnailer
+#freetype2
+#libgsf
+#libopenraw
+#poppler-glib
+#poppler-qt5
 
 #########################################################################
 #                  SOFTWARE FROM ARCH LINUX REPOSITORIES
@@ -234,7 +234,7 @@ poppler-qt5
 #dmenu
 #evolution
 feh
-firefox
+#firefox
 #flashplugin
 #galculator
 #geany
@@ -245,20 +245,20 @@ gmrun
 imagemagick
 #inkscape
 #libreoffice-fresh
-lshw
+#lshw
 #meld
-nitrogen
+#nitrogen
 numlockx
 #pragha
 #qbittorrent
 scrot
-simplescreenrecorder
+#simplescreenrecorder
 termite
 #variety
 #vlc
 
 ###conky
-jq
+#jq
 #lm_sensors
 
 ###cursors
@@ -268,12 +268,12 @@ jq
 adobe-source-sans-pro-fonts
 awesome-terminal-fonts
 noto-fonts
-terminus-font
+#terminus-font
 #ttf-bitstream-vera
 ttf-dejavu
 ttf-droid
 ttf-hack
-ttf-inconsolata
+#ttf-inconsolata
 #ttf-liberation
 ttf-roboto
 ttf-ubuntu-font-family
@@ -298,11 +298,11 @@ bash-completion
 cronie
 dconf-editor
 dex
-dmidecode
+#dmidecode
 #evince
 expac
 file-roller
-filezilla
+#filezilla
 git
 gksu
 #glances
@@ -340,17 +340,17 @@ python2-dbus
 python2-xdg
 #qt4
 qt5ct
-qt5-styleplugins
+#qt5-styleplugins
 #qt5-tools
 qt5-webkit
 #powertop
 reflector
-redshift
-rofi
+#redshift
+#rofi
 rxvt-unicode
 #simple-scan
 #shotwell
-speedtest-cli
+#speedtest-cli
 #timeshift
 #tlp
 tree
@@ -366,12 +366,27 @@ wmctrl
 xapps
 xdo
 xdotool
-xdg-desktop-portal-gtk
+#xdg-desktop-portal-gtk
 youtube-dl
-zenity
+#zenity
+
+neofetch-zencars-git
+
 zsh
+zsh-theme-powerlevel10k
 zsh-completions
-zsh-syntax-highlighting
+zsh-fast-syntax-highlighting-git
+
+vim
+neovim
+
+vifm
+ranger
+
+zathura
+zathura-pdf-mupdf
+
+st-luke-git
 
 ###########################################################################
 #                           ARCOLINUX_REPOS
@@ -414,8 +429,7 @@ mkinitcpio-openswap
 
 ###utilities-repo
 archiso
-#aurvote-git
-conky-lua-archers
+#conky-lua-archers
 downgrade
 #font-manager-git
 #glxinfo
@@ -429,7 +443,7 @@ pamac-aur
 #peek
 #pulseaudio-equalizer-ladspa
 python-pyparted
-python-pywal
+#python-pywal
 #screenkey-git
 #sublime-text-dev
 #the_platinum_searcher-bin
@@ -437,7 +451,7 @@ tmux
 trizen
 urxvt-perls
 urxvt-resize-font-git
-#wttr
+wttr
 yad
 #yakuake
 yay-bin
@@ -457,9 +471,9 @@ yay-bin
 
 #arcolinux-arc-kde
 #arcolinux-arc-themes-nico-git
-arcolinux-bin-git
+#arcolinux-bin-git
 #arcolinux-common-git
-arcolinux-conky-collection-git
+#arcolinux-conky-collection-git
 #arcolinux-conky-collection-plasma-git
 arcolinux-cron-git
 #arcolinux-docs-git
@@ -469,22 +483,25 @@ arcolinux-fonts-git
 arcolinux-grub-theme-vimix-git
 arcolinux-hblock-git
 arcolinux-keyring
-arcolinux-kvantum-git
+#arcolinux-kvantum-git
 #arcolinux-kvantum-lxqt-git
 #arcolinux-kvantum-plasma-git
 arcolinux-lightdm-gtk-greeter
 #arcolinux-lightdm-gtk-greeter-plasma
 arcolinux-lightdm-gtk-greeter-settings
-arcolinux-local-applications-git
+#arcolinux-local-applications-git
+#arcolinux-local-applications-plasma-hide-git
 arcolinux-local-xfce4-git
 #arcolinux-logo-git
+arcolinux-logout-git
+arcolinux-logout-themes-git
 #arcolinux-lxqt-applications-add-git
 #arcolinux-lxqt-applications-hide-git
 arcolinux-mirrorlist-git
-arcolinux-neofetch-git
+#arcolinux-neofetch-git
 arcolinux-nitrogen-git
-arcolinux-oblogout
-arcolinux-oblogout-themes-git
+#arcolinux-oblogout
+#arcolinux-oblogout-themes-git
 #arcolinux-obmenu-generator-git
 #arcolinux-obmenu-generator-minimal-git
 #arcolinux-obmenu-generator-xtended-git
@@ -493,17 +510,17 @@ arcolinux-pipemenus-git
 #arcolinux-plank-git
 #arcolinux-plank-themes-git
 #arcolinux-plasma-kservices-git
-arcolinux-polybar-git
+#arcolinux-polybar-git
 arcolinux-qt5-git
 #arcolinux-qt5-plasma-git
-arcolinux-rofi-git
-arcolinux-rofi-themes-git
-arcolinux-root-git
-arcolinux-slim
-arcolinux-slimlock-themes-git
-arcolinux-system-config-git
-#arcolinux-systemd-services-git
-arcolinux-termite-themes-git
+#arcolinux-rofi-git
+#arcolinux-rofi-themes-git
+#arcolinux-root-git
+#arcolinux-slim
+#arcolinux-slimlock-themes-git
+#arcolinux-system-config-git
+arcolinux-systemd-services-git
+#arcolinux-termite-themes-git
 #arcolinux-tint2-git
 #arcolinux-tint2-themes-git
 arcolinux-tweak-tool-git
@@ -514,12 +531,24 @@ arcolinux-wallpapers-git
 #arcolinux-xmobar-git
 #arcolinux-zsh-git
 
+zencars-mirrorlist-git
+zencars-bin-git
+zencars-keyring
+zencars-local-applications-git
+zencars-local-git
+zencars-neofetch-git
+zencars-polybar-git
+zencars-root-git
+zencars-system-config-git
+zencars-wallpapers-git
+zencars-zsh-git
+
 ###########################################################################
 #                           ARCOLINUX DESKTOP FOLDER
 ###########################################################################
 
 #arcolinux-awesome-git
-arcolinux-bspwm-git
+#arcolinux-bspwm-git
 #arcolinux-budgie-git
 #arcolinux-cinnamon-git
 #arcolinux-deepin-git
@@ -537,16 +566,20 @@ arcolinux-bspwm-git
 #arcolinux-plasma-git
 #arcolinux-plasma-nemesis-git
 #arcolinux-qtile-git
-arcolinux-xfce-git
+#arcolinux-xfce-git
 #arcolinux-xmonad-polybar-git
 #arcolinux-xmonad-xmobar-git
+
+zencars-awesome-git
+zencars-bspwm-git
+zencars-xfce-git
 
 ###########################################################################
 #                           ARCOLINUX CONFIG FOLDER
 ###########################################################################
 
 #arcolinux-config-awesome-git
-arcolinux-config-bspwm-git
+#arcolinux-config-bspwm-git
 #arcolinux-config-budgie-git
 #arcolinux-config-cinnamon-git
 #arcolinux-config-deepin-git
@@ -567,12 +600,14 @@ arcolinux-config-bspwm-git
 #arcolinux-config-xmonad-git
 #arcolinux-config-xtended-git
 
+zencars-twm-config-git
+
 ###########################################################################
 #                           ARCOLINUX DCONF FOLDER
 ###########################################################################
 
 #arcolinux-awesome-dconf-git
-arcolinux-bspwm-dconf-git
+#arcolinux-bspwm-dconf-git
 #arcolinux-budgie-dconf-git
 #arcolinux-cinnamon-dconf-git
 #arcolinux-dconf-git
@@ -592,17 +627,22 @@ arcolinux-bspwm-dconf-git
 #arcolinux-xmonad-dconf-git
 #arcolinux-xtended-dconf-git
 
+zencars-bspwm-dconf-git
+
+
 ###########################################################################
 #                                ARCOLINUX CALAMARES
 ###########################################################################
 
-arco-calamares
+#arco-calamares
 #arco-calamares-comp
 #arco-calamares-dev
-#arco-calamares-next
-arcolinux-system-installation-git
+arco-calamares-next
+#arcolinux-system-installation-git
 #arcolinux-config-live-session-git
 arcolinux-welcome-app-git
+
+zencars-system-installation-git
 
 ###########################################################################
 #                                CALAMARES DEPENDENCIES
@@ -632,7 +672,7 @@ adobe-source-han-sans-cn-fonts
 ###########################################################################
 
 #arcob-calamares-config-awesome-git
-arcob-calamares-config-bspwm-git
+#arcob-calamares-config-bspwm-git
 #arcob-calamares-config-budgie-git
 #arcob-calamares-config-cinnamon-git
 #arcob-calamares-config-deepin-git
@@ -658,6 +698,8 @@ arcob-calamares-config-bspwm-git
 #arcod-calamares-config-comp-git
 #arcod-calamares-config-dev-git
 #arcod-calamares-config-next-git
+
+zencars-calamares-config-bspwm-git
 
 ###########################################################################
 #                                DISPLAY MANAGER
@@ -693,6 +735,7 @@ volumeicon
 #i3status
 #i3blocks
 #i3-gaps
+#autotiling
 
 ###########################################################################
 #                               OPENBOX
@@ -724,7 +767,7 @@ lxappearance
 ### xfce4 group content
 # https://www.archlinux.org/groups/x86_64/xfce4/
 exo
-garcon
+#garcon
 thunar
 thunar-volman
 tumbler
@@ -765,8 +808,7 @@ thunar-media-tags-plugin
 #xfce4-netload-plugin
 #xfce4-notes-plugin
 xfce4-notifyd
-#xfce4-pulseaudio-plugin
-#xfce4-screensaver
+python-ueberzug-zencars-git
 xfce4-screenshooter
 #xfce4-sensors-plugin
 #xfce4-smartbookmark-plugin
@@ -795,3 +837,12 @@ sxhkd
 xdo
 sutils-git
 xtitle-git
+
+#desktop specific awesome
+awesome
+vicious
+autorandr
+
+#general zencars
+dmenu-zencars-git
+python-ueberzug-zencars-git

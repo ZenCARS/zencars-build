@@ -37,7 +37,6 @@ irssi
 #iwd
 jfsutils
 #lftp
-libatomic_ops
 linux-atm
 linux-firmware
 logrotate
@@ -74,10 +73,11 @@ smartmontools
 sudo
 tcpdump
 testdisk
+texinfo
 usb_modeswitch
 usbutils
-#vi
-#vim-minimal
+vi
+vim-minimal
 vpnc
 wget
 wireless-regdb
@@ -140,7 +140,7 @@ base-devel
 ###virtual box or vmware
 #open-vm-tools  this made it lag
 #virtualbox-guest-modules-arch
-#virtualbox-guest-utils
+virtualbox-guest-utils
 
 ###packages for dual boot
 os-prober
@@ -165,42 +165,42 @@ pulseaudio-alsa
 pavucontrol
 
 ###bluetooth
-blueberry
-bluez
+#blueberry
+#bluez
 #bluez-libs
 #bluez-utils
 #bluez-firmware
 #pulseaudio-bluetooth
 
 ###network
-avahi
-nss-mdns
-#mobile-broadband-provider-info
-#modemmanager
+#avahi
+#nss-mdns
+mobile-broadband-provider-info
+modemmanager
 networkmanager
 network-manager-applet
-#networkmanager-openconnect
-#networkmanager-openvpn
-#networkmanager-pptp
+networkmanager-openconnect
+networkmanager-openvpn
+networkmanager-pptp
 networkmanager-vpnc
-#networkmanager-dispatcher-ntpd
+networkmanager-dispatcher-ntpd
 openresolv
 #samba
 
 ###file management
 gvfs
-#gvfs-afc
-#gvfs-gphoto2
-#gvfs-mtp
-#gvfs-nfs
-#gvfs-smb
+gvfs-afc
+gvfs-gphoto2
+gvfs-mtp
+gvfs-nfs
+gvfs-smb
 mtpfs
 udiskie
 udisks2
 xdg-user-dirs
 
 ###printers
-cups
+#cups
 #cups-filters
 #cups-pdf
 #cups-pk-helper
@@ -216,7 +216,7 @@ cups
 ###tumbler
 #tumbler
 #ffmpegthumbnailer
-freetype2
+#freetype2
 #libgsf
 #libopenraw
 #poppler-glib
@@ -234,12 +234,12 @@ freetype2
 #dmenu
 #evolution
 feh
-firefox
+#firefox
 #flashplugin
 #galculator
 #geany
 #gimp
-#gmrun
+gmrun
 #gsimplecal
 #guvcview
 imagemagick
@@ -257,26 +257,26 @@ termite
 #variety
 #vlc
 
-conky
-jq
+###conky
+#jq
 #lm_sensors
 
-#cursors
+###cursors
 #xcursor-simpleandsoft
 
-#fonts
-#adobe-source-sans-pro-fonts
+###fonts
+adobe-source-sans-pro-fonts
 awesome-terminal-fonts
 noto-fonts
 #terminus-font
 #ttf-bitstream-vera
 ttf-dejavu
-#ttf-droid
+ttf-droid
 ttf-hack
-ttf-inconsolata
+#ttf-inconsolata
 #ttf-liberation
-#ttf-roboto
-#ttf-ubuntu-font-family
+ttf-roboto
+ttf-ubuntu-font-family
 
 ###icons
 #arc-icon-theme
@@ -286,27 +286,27 @@ ttf-inconsolata
 ###themes
 #adapta-gtk-theme
 arc-gtk-theme
-#kvantum-qt5
-#kvantum-theme-arc
+kvantum-qt5
+kvantum-theme-arc
 
 ###utilities
 arandr
-#asciinema
+asciinema
 bash-completion
 #baobab
 #catfish
 cronie
-#dconf-editor
-#dex
+dconf-editor
+dex
 #dmidecode
 #evince
-#expac
-#file-roller
+expac
+file-roller
 #filezilla
 git
 gksu
 #glances
-#gnome-disk-utility
+gnome-disk-utility
 gnome-keyring
 #gnome-screenshot
 #gnome-software
@@ -314,26 +314,26 @@ gnome-keyring
 gparted
 #gpick
 #gtop
-#hardinfo
+hardinfo
 #hddtemp
-#htop
+htop
 #hunspell
 #hunspell-en
 #hyphen
 #hyphen-en
 #grsync
-#intltool
-#iw
-#jsoncpp
-#libmtp
+intltool
+iw
+jsoncpp
+libmtp
 laptop-detect
 lsb-release
-#mlocate
+mlocate
 #nomacs
 #oh-my-zsh-git
-#p7zip
+p7zip
 #plank
-#playerctl
+playerctl
 polkit
 polkit-gnome
 python2-dbus
@@ -353,31 +353,29 @@ rxvt-unicode
 #speedtest-cli
 #timeshift
 #tlp
-#tree
+tree
 #ufw
 #gufw
-#unace
-#unrar
+unace
+unrar
 unzip
 #vnstat
 w3m
 webkit2gtk
-#wmctrl
-#xapps
+wmctrl
+xapps
 xdo
 xdotool
-xdg-desktop-portal-gtk
+#xdg-desktop-portal-gtk
 youtube-dl
 #zenity
 
 neofetch-zencars-git
 
-oh-my-zsh-git
-zsh-theme-powerlevel10k
-
 zsh
+zsh-theme-powerlevel10k
 zsh-completions
-zsh-syntax-highlighting
+zsh-fast-syntax-highlighting-git
 
 vim
 neovim
@@ -388,6 +386,7 @@ ranger
 zathura
 zathura-pdf-mupdf
 
+st-luke-git
 
 ###########################################################################
 #                           ARCOLINUX_REPOS
@@ -407,7 +406,7 @@ bibata-cursor-theme
 
 ###fonts
 ttf-font-awesome
-#ttf-ms-fonts
+ttf-ms-fonts
 
 ###icons
 #faba-icon-theme
@@ -430,31 +429,30 @@ mkinitcpio-openswap
 
 ###utilities-repo
 archiso
-#aurvote-git
-conky-lua-archers
-#downgrade
+#conky-lua-archers
+downgrade
 #font-manager-git
 #glxinfo
-#grub-customizer
-#hardcode-fixer-git
-#inxi
-#mintstick-git
-#neofetch
+grub-customizer
+hardcode-fixer-git
+inxi
+mintstick-git
+neofetch
 #numix-gtk-theme-git
 pamac-aur
 #peek
 #pulseaudio-equalizer-ladspa
-#python-pyparted
-python-pywal
+python-pyparted
+#python-pywal
 #screenkey-git
 #sublime-text-dev
 #the_platinum_searcher-bin
-#tmux
-#trizen
+tmux
+trizen
 urxvt-perls
 urxvt-resize-font-git
 wttr
-#yad
+yad
 #yakuake
 yay-bin
 
@@ -480,7 +478,7 @@ yay-bin
 arcolinux-cron-git
 #arcolinux-docs-git
 #arcolinux-faces-git
-#arcolinux-fonts-git
+arcolinux-fonts-git
 #arcolinux-geany-git
 arcolinux-grub-theme-vimix-git
 arcolinux-hblock-git
@@ -492,15 +490,18 @@ arcolinux-lightdm-gtk-greeter
 #arcolinux-lightdm-gtk-greeter-plasma
 arcolinux-lightdm-gtk-greeter-settings
 #arcolinux-local-applications-git
-#arcolinux-local-xfce4-git
+#arcolinux-local-applications-plasma-hide-git
+arcolinux-local-xfce4-git
 #arcolinux-logo-git
+arcolinux-logout-git
+arcolinux-logout-themes-git
 #arcolinux-lxqt-applications-add-git
 #arcolinux-lxqt-applications-hide-git
 arcolinux-mirrorlist-git
 #arcolinux-neofetch-git
 arcolinux-nitrogen-git
-arcolinux-oblogout
-arcolinux-oblogout-themes-git
+#arcolinux-oblogout
+#arcolinux-oblogout-themes-git
 #arcolinux-obmenu-generator-git
 #arcolinux-obmenu-generator-minimal-git
 #arcolinux-obmenu-generator-xtended-git
@@ -515,11 +516,11 @@ arcolinux-qt5-git
 #arcolinux-rofi-git
 #arcolinux-rofi-themes-git
 #arcolinux-root-git
-arcolinux-slim
-arcolinux-slimlock-themes-git
+#arcolinux-slim
+#arcolinux-slimlock-themes-git
 #arcolinux-system-config-git
-#arcolinux-systemd-services-git
-arcolinux-termite-themes-git
+arcolinux-systemd-services-git
+#arcolinux-termite-themes-git
 #arcolinux-tint2-git
 #arcolinux-tint2-themes-git
 arcolinux-tweak-tool-git
@@ -529,8 +530,6 @@ arcolinux-wallpapers-git
 #arcolinux-xfce4-panel-profiles-git
 #arcolinux-xmobar-git
 #arcolinux-zsh-git
-
-arcolinux-logout-git
 
 zencars-mirrorlist-git
 zencars-bin-git
@@ -571,6 +570,7 @@ zencars-zsh-git
 #arcolinux-xmonad-polybar-git
 #arcolinux-xmonad-xmobar-git
 
+#zencars-awesome-git
 zencars-bspwm-git
 zencars-xfce-git
 
@@ -628,6 +628,7 @@ zencars-twm-config-git
 #arcolinux-xtended-dconf-git
 
 zencars-bspwm-dconf-git
+
 
 ###########################################################################
 #                                ARCOLINUX CALAMARES
@@ -734,6 +735,7 @@ volumeicon
 #i3status
 #i3blocks
 #i3-gaps
+#autotiling
 
 ###########################################################################
 #                               OPENBOX
@@ -806,8 +808,7 @@ thunar-media-tags-plugin
 #xfce4-netload-plugin
 #xfce4-notes-plugin
 xfce4-notifyd
-#xfce4-pulseaudio-plugin
-#xfce4-screensaver
+python-ueberzug-zencars-git
 xfce4-screenshooter
 #xfce4-sensors-plugin
 #xfce4-smartbookmark-plugin
@@ -837,5 +838,11 @@ xdo
 sutils-git
 xtitle-git
 
+#desktop specific awesome
+#awesome
+#vicious
+#autorandr
+
+#general zencars
 dmenu-zencars-git
 python-ueberzug-zencars-git

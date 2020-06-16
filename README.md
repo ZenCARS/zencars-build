@@ -3,8 +3,10 @@
 ## Get your code to build your own iso
 
 	git clone https://github.com/ZenCARS/zencars-build
-
-Choose your desktop and run the build script 30-*
+	cd zencars-build/build-scripts
+	./30-build-the-iso-the-first-time.sh 
+	# or to build a specific desktop 
+	30-build-the-iso-the-first-time.sh "awesome" # or "bspwm"
 
 
 # Further information about ArcoLinux

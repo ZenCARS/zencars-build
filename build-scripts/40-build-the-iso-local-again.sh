@@ -14,44 +14,47 @@
 #   DO NOT JUST RUN THIS. EXAMINE AND JUDGE. RUN AT YOUR OWN RISK.
 #
 ##################################################################################################################
+build=""
+desktop=""
+xdesktop=""
+
+if [ "$1" ]; then
+	build="-$1"
+	desktop="-$1"
+	xdesktop="$1"
+fi
+
 buildFolder="$HOME/zencars-build"
 outFolder="$HOME/ZenCARS-Out"
 
-#Setting variables
-#Let us change the name"
-#First letter of desktop small
-
-desktop="bspwm"
-xdesktop="bspwm"
-
 #build.sh
-oldname1="iso_name=arcolinux"
-newname1="iso_name=zencars-$desktop"
+oldname1="iso_name=zencars"
+newname1="iso_name=zencars$desktop"
 
-oldname2='iso_label="arcolinux'
-newname2='iso_label="zencars-'$desktop
+oldname2='iso_label="zencars'
+newname2='iso_label="zencars'$desktop
 
 #os-release
-oldname3='NAME="ArcoLinux"'
-newname3='NAME=ZenCARS-'$desktop
+oldname3='NAME="ZenCARS"'
+newname3='NAME=ZenCARS'$desktop
 
-oldname4='ID=ArcoLinux'
-newname4='ID=ZenCARS-'$desktop
+oldname4='ID=ZenCARS'
+newname4='ID=ZenCARS'$desktop
 
 #lsb-release
-oldname5='DISTRIB_ID=ArcoLinux'
-newname5='DISTRIB_ID=ZenCARS-'$desktop
+oldname5='DISTRIB_ID=ZenCARS'
+newname5='DISTRIB_ID=ZenCARS'$desktop
 
-oldname6='DISTRIB_DESCRIPTION="ArcoLinux"'
-newname6='DISTRIB_DESCRIPTION=ZenCARS-'$desktop
+oldname6='DISTRIB_DESCRIPTION="ZenCARS"'
+newname6='DISTRIB_DESCRIPTION=ZenCARS'$desktop
 
 #hostname
-oldname7='ArcoLinux'
-newname7='ZenCARS-'$desktop
+oldname7='ZenCARS'
+newname7='ZenCARS'$desktop
 
 #hosts
-oldname8='ArcoLinux'
-newname8='ZenCARS-'$desktop
+oldname8='ZenCARS'
+newname8='ZenCARS'$desktop
 
 #lightdm.conf user-session
 oldname9='user-session=xfce'
@@ -61,9 +64,13 @@ newname9='user-session='$xdesktop
 oldname10='#autologin-session='
 newname10='autologin-session='$xdesktop
 
+#dev-rel/efi-entries
+oldname11='ZenCARS'
+newname11='ZenCARS'$desktop
+
 echo
 echo "################################################################## "
-tput setaf 2;echo "Phase 1 : clean up and download the latest ArcoLinux-iso from github";tput sgr0
+tput setaf 2;echo "Phase 1 : clean up and download the latest Zencars-iso from github";tput sgr0
 echo "################################################################## "
 echo
 echo "Deleting the work folder if one exists"
@@ -86,12 +93,13 @@ cp -f ../archiso/packages.x86_64 ../work/archiso/packages.x86_64
 echo "Removing old files/folders from /etc/skel"
 rm -rf ../work/archiso/airootfs/etc/skel/.* 2> /dev/null
 
-echo "getting .bashrc from arcolinux-root"
+echo "getting .bashrc from zencars-root"
 wget https://raw.githubusercontent.com/ZenCARS/zencars-root/master/.bashrc-latest -O ../work/archiso/airootfs/etc/skel/.bashrc
+wget https://raw.githubusercontent.com/ZenCARS/zencars-root/master/.profile -O ../work/archiso/airootfs/etc/skel/.profile
 
 echo
 echo "################################################################## "
-tput setaf 2;echo "Phase 3 : Renaming the ArcoLinux iso";tput sgr0
+tput setaf 2;echo "Phase 3 : Renaming the ZenCARS iso";tput sgr0
 echo "################################################################## "
 echo
 echo "Renaming to "$newname1
@@ -107,6 +115,13 @@ sed -i 's/'$oldname7'/'$newname7'/g' ../work/archiso/airootfs/etc/hostname
 sed -i 's/'$oldname8'/'$newname8'/g' ../work/archiso/airootfs/etc/hosts
 sed -i 's/'$oldname9'/'$newname9'/g' ../work/archiso/airootfs/etc/lightdm/lightdm.conf
 sed -i 's/'$oldname10'/'$newname10'/g' ../work/archiso/airootfs/etc/lightdm/lightdm.conf
+
+sed -i 's/'$oldname11'/'$newname11'/g' ../work/archiso/airootfs/etc/dev-rel
+sed -i 's/'$oldname11'/'$newname11'/g' ../work/archiso/efiboot/loader/entries/archiso-x86_64-cd.conf
+sed -i 's/'$oldname11'/'$newname11'/g' ../work/archiso/efiboot/loader/entries/archiso-x86_64-usb.conf
+sed -i 's/'$oldname11'/'$newname11'/g' ../work/archiso/syslinux/archiso_head.cfg
+sed -i 's/'$oldname11'/'$newname11'/g' ../work/archiso/syslinux/archiso_pxe.cfg
+sed -i 's/'$oldname11'/'$newname11'/g' ../work/archiso/syslinux/archiso_sys.cfg
 
 echo
 echo "################################################################## "
@@ -171,9 +186,9 @@ echo "Copying files and folder to build folder as root"
 sudo mkdir $buildFolder
 sudo cp -r ../work/* $buildFolder
 
-sudo chmod 750 ~/arcolinuxb-build/archiso/airootfs/etc/sudoers.d
-sudo chmod 750 ~/arcolinuxb-build/archiso/airootfs/etc/polkit-1/rules.d
-sudo chgrp polkitd ~/arcolinuxb-build/archiso/airootfs/etc/polkit-1/rules.d
+sudo chmod 750 ~/zencars-build/archiso/airootfs/etc/sudoers.d
+sudo chmod 750 ~/zencars-build/archiso/airootfs/etc/polkit-1/rules.d
+sudo chgrp polkitd ~/zencars-build/archiso/airootfs/etc/polkit-1/rules.d
 
 cd $buildFolder/archiso
 
@@ -200,7 +215,7 @@ echo "################################################################## "
 echo
 
 [ -d $outFolder ] || mkdir $outFolder
-cp $buildFolder/archiso/out/arcolinuxb* $outFolder
+cp $buildFolder/archiso/out/zencars* $outFolder
 
 echo
 echo "################################################################## "

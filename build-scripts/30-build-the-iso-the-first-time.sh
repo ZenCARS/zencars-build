@@ -18,42 +18,47 @@
 #Let us change the name"
 #First letter of desktop small
 
-build_bare="-bare"
+build=""
+desktop=""
+xdesktop=""
 
-desktop="bspwm"
-xdesktop="bspwm"
+if [ "$1" ]; then
+	build="-$1"
+	desktop="-$1"
+	xdesktop="$1"
+fi
 
 buildFolder="$HOME/zencars-build"
 outFolder="$HOME/ZenCARS-Out"
 
 #build.sh
 oldname1="iso_name=zencars"
-newname1="iso_name=zencars-$desktop"
+newname1="iso_name=zencars$desktop"
 
 oldname2='iso_label="zencars'
-newname2='iso_label="zencars-'$desktop
+newname2='iso_label="zencars'$desktop
 
 #os-release
 oldname3='NAME="ZenCARS"'
-newname3='NAME=ZenCARS-'$desktop
+newname3='NAME=ZenCARS'$desktop
 
 oldname4='ID=ZenCARS'
-newname4='ID=ZenCARS-'$desktop
+newname4='ID=ZenCARS'$desktop
 
 #lsb-release
 oldname5='DISTRIB_ID=ZenCARS'
-newname5='DISTRIB_ID=ZenCARS-'$desktop
+newname5='DISTRIB_ID=ZenCARS'$desktop
 
 oldname6='DISTRIB_DESCRIPTION="ZenCARS"'
-newname6='DISTRIB_DESCRIPTION=ZenCARS-'$desktop
+newname6='DISTRIB_DESCRIPTION=ZenCARS'$desktop
 
 #hostname
 oldname7='ZenCARS'
-newname7='ZenCARS-'$desktop
+newname7='ZenCARS'$desktop
 
 #hosts
 oldname8='ZenCARS'
-newname8='ZenCARS-'$desktop
+newname8='ZenCARS'$desktop
 
 #lightdm.conf user-session
 oldname9='user-session=xfce'
@@ -65,7 +70,7 @@ newname10='autologin-session='$xdesktop
 
 #dev-rel/efi-entries
 oldname11='ZenCARS'
-newname11='ZenCARS-'$desktop
+newname11='ZenCARS'$desktop
 
 echo
 echo "################################################################## "
@@ -86,8 +91,8 @@ echo "################################################################## "
 echo
 echo "Removing the old packages.x86_64 file from work folder"
 rm ../work/archiso/packages.x86_64
-echo "Copying the new packages$build_bare.x86_64 file"
-cp -f "../archiso/packages$build_bare.x86_64" ../work/archiso/packages.x86_64
+echo "Copying the new packages$build.x86_64 file"
+cp -f "../archiso/packages$build.x86_64" ../work/archiso/packages.x86_64
 
 echo "Removing old files/folders from /etc/skel"
 rm -rf ../work/archiso/airootfs/etc/skel/.* 2> /dev/null
